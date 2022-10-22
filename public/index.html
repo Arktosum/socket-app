@@ -7,11 +7,16 @@
     <title>Document</title>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Index!</h1>
+    <form action="" id="authForm">
+        Display Name : <input type="text" name = "name">
+        Password :     <input type="text" name = "password">
+        <input type="submit" value="Authenticate">
+    </form>
     <form action="" id = "chatForm">
-        Message: <input type="text">
+        Message: <input type="text" name = "message">
         <input type="submit" value="Submit">
     </form>
     <div id="messageBox"></div>

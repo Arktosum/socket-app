@@ -12,15 +12,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 const PORT = 3000;
 
 io.on('connection', (socket)=>{
-    socket.emit('message','Welcome to chat!')
+    socket.emit('message',{message : 'Welcome to chat!',sender : "Bot"})
     // On webchat connection
-    socket.broadcast.emit('message','Someone joined the chat!')
+    socket.broadcast.emit('message',{message : 'Welcome to chat!',sender : "Bot"})
 
     socket.on('disconnect', ()=>{
-        io.emit('message',"A user has left!")
+        io.emit('message',{message : 'Welcome to chat!',sender : "Bot"})
     })
 
-    socket.on('chatMsg', (msg)=>{
+    socket.on('chatMsg',(msg)=>{
         io.emit('message',msg)
     })
 })

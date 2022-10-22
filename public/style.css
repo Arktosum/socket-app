@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.chat-message{
+    background-color:beige;
+    border : 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding : 10px;
+}
+
+#chatForm{
+    display: none;
+}
+
+#messageBox{
+    display: none;
+}
+
+#authForm{
+    display: flex;
+    flex-direction: column;
+}
