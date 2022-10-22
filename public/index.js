@@ -25,6 +25,7 @@ socket.on('message',(message)=>{
     let msg = message.message;
     let name = message.sender;
     messageBox.innerHTML += `<div class="chat-message">${name} : ${msg}</div>` 
+    messageBox.scrollTop = messageBox.scrollHeight;
 })
 
 chatForm.addEventListener('submit',(e)=>{

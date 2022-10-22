@@ -17,7 +17,7 @@ io.on('connection', (socket)=>{
     socket.broadcast.emit('message',{message : 'Welcome to chat!',sender : "Bot"})
 
     socket.on('disconnect', ()=>{
-        io.emit('message',{message : 'Welcome to chat!',sender : "Bot"})
+        io.emit('message',{message : 'Someone Left',sender : "Bot"})
     })
 
     socket.on('chatMsg',(msg)=>{

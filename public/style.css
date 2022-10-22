@@ -18,6 +18,9 @@
 
 #messageBox{
     display: none;
+    width: 300px;
+    height: 300px;
+    overflow-y: auto;
 }
 
 #authForm{
